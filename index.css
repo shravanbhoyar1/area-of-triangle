@@ -1,9 +1,9 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.main-div{
+.main-div {
     height: 290px;
     width: 240px;
     background-color: rgb(193, 151, 101);
@@ -11,8 +11,31 @@ body{
     margin: 30px auto;
     border: 1px solid rgb(202, 140, 66);
     border-radius: 15px 25px;
+
 }
-.input-div{
+
+.img-div {
+    position: relative;
+    height: 15px;
+
+}
+
+.clear-icon {
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    cursor: pointer;
+}
+.clear-icon:hover{
+    height: 28px;
+    width: 28px;
+} 
+
+.input-div {
     height: 110px;
     width: 210px;
     padding: 0px 10px;
@@ -22,7 +45,9 @@ body{
     margin-top: 30px;
 
 }
-#length,#breath{
+
+#length,
+#breath {
     height: 30px;
     padding: 5px;
     border: none;
@@ -32,12 +57,14 @@ body{
     font-size: 20px;
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
-#result{
-    font-size: 20px;
+
+#result {
+    font-size: 17px;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     margin-left: 15px;
 }
-.area-cal-btn{
+
+.area-cal-btn {
     width: 140px;
     padding: 8px 14px;
     border-radius: 15px;
@@ -47,7 +74,8 @@ body{
     cursor: pointer;
     border: none;
 }
-.area-cal-btn:hover{
+
+.area-cal-btn:hover {
 
     box-shadow: 1px 2px 1px 1px rgb(212, 195, 195);
     background-color: rgb(208, 196, 196);
