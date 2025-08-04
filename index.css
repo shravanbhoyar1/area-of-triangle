@@ -4,7 +4,7 @@ body{
 }
 
 .main-div{
-    height: 350px;
+    height: 290px;
     width: 240px;
     background-color: rgb(193, 151, 101);
     padding: 15px;
@@ -13,16 +13,43 @@ body{
     border-radius: 15px 25px;
 }
 .input-div{
-    height: 150px;
+    height: 110px;
     width: 210px;
-    background-color: red;
-    padding: 10px;
+    padding: 0px 10px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    margin-top: 30px;
 
 }
-#length{
+#length,#breath{
     height: 30px;
-    padding: 5px    ;
+    padding: 5px;
+    border: none;
+    border-radius: 3px 15px;
+    background-color: rgb(212, 195, 195);
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+#result{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin-left: 15px;
+}
+.area-cal-btn{
+    width: 140px;
+    padding: 8px 14px;
+    border-radius: 15px;
+    font-size: 16px;
+    align-items: center;
+    margin-left: 40px;
+    cursor: pointer;
+    border: none;
+}
+.area-cal-btn:hover{
+
+    box-shadow: 1px 2px 1px 1px rgb(212, 195, 195);
+    background-color: rgb(208, 196, 196);
+
 }
