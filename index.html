@@ -16,7 +16,7 @@
         <input type="text" id="breath" placeholder="Enter breath" >
         </div>
         <p id="result"></p>
-        <button class="area-cal-btn" onclick="pmOfRectangle()">calculate area</button>
+        <button class="area-cal-btn" onclick="pmOfRectangle()">calculate perimeter</button>
     </div>
 
     <script>
@@ -27,7 +27,7 @@
 
         function pmOfRectangle()
         {
-            const periMeter = 2(parseInt(lenghtInput.value) + parseInt(breathInput.value));
+            const periMeter = 2 * (parseInt(lenghtInput.value) + parseInt(breathInput.value));
             resultElement.innerText = `Perimeter of rectangle : ${periMeter}`;
             resultElement.style.marginBottom = "19px"
 
