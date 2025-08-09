@@ -13,7 +13,9 @@
         </div>
         <div class="input-div">
         <input type="text" id="length" placeholder="Enter length" >
+        <span id="error1"></span>
         <input type="text" id="breath" placeholder="Enter breath" >
+        <span id="error2"></span>
         </div>
         <p id="result"></p>
         <button class="area-cal-btn" onclick="pmOfRectangle()">calculate perimeter</button>
@@ -24,10 +26,30 @@
         let breathInput = document.getElementById("breath");
         let resultElement = document.getElementById("result");
         let clearElement = document.getElementById("clear-result");
+        let errorElement1 = document.getElementById("error1");
+        let errorElement2 = document.getElementById("error2");
 
         function pmOfRectangle()
         {
-            const periMeter = 2 * (parseInt(lenghtInput.value) + parseInt(breathInput.value));
+            const val1 = parseInt(lenghtInput.value);
+            const val2 = parseInt(breathInput.value);
+
+            if(isNaN(val1)){
+                errorElement1.innerText = "Please enter valid first number";
+                return;
+            }
+
+             errorElement1.innerText ="";
+
+             if(isNaN(val2)){
+                errorElement2.innerText = "Please enter valid second number";
+                return;
+            }
+
+             errorElement2.innerText ="";
+             errorElement2.style.marginBottom ="12px";
+
+            const periMeter = 2 * (val1 + val2);
             resultElement.innerText = `Perimeter of rectangle : ${periMeter}`;
             resultElement.style.marginTop = "-1px"
             resultElement.style.fontSize = "16px"
@@ -38,8 +60,9 @@
             lenghtInput.value=" ";
             breathInput.value=" ";
             resultElement.innerText="";
-            resultElement.style.margin="35px"
-            
+            resultElement.style.margin="25px"
+            errorElement1.innerText="";
+            errorElement2.innerText="";
         }
 
     </script>
