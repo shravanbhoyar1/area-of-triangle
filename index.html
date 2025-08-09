@@ -18,7 +18,7 @@
         <span id="error2"></span>
         </div>
         <p id="result"></p>
-        <button class="area-cal-btn" onclick="pmOfRectangle()">calculate perimeter</button>
+        <button class="area-cal-btn" onclick="pmOfRectangle()" id="btn">calculate perimeter</button>
     </div>
 
     <script>
@@ -28,6 +28,7 @@
         let clearElement = document.getElementById("clear-result");
         let errorElement1 = document.getElementById("error1");
         let errorElement2 = document.getElementById("error2");
+        let pmButton = document.getElementById("btn");
 
         function pmOfRectangle()
         {
@@ -43,11 +44,12 @@
 
              if(isNaN(val2)){
                 errorElement2.innerText = "Please enter valid second number";
+                pmButton.style.marginTop ="35px";
                 return;
             }
 
              errorElement2.innerText ="";
-             errorElement2.style.marginBottom ="12px";
+             
 
             const periMeter = 2 * (val1 + val2);
             resultElement.innerText = `Perimeter of rectangle : ${periMeter}`;
